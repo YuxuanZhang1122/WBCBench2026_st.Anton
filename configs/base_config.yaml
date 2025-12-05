@@ -1,0 +1,60 @@
+# WBCBench 2026 - Base Configuration
+
+# Data
+data:
+  root_dir: "raw_data"
+  image_size: 368  # Native resolution
+  target_size: 224  # DinoBloom training resolution
+  num_classes: 13
+
+# DinoBloom Model
+model:
+  checkpoint_path: "DinoBloom-B.pth"
+  embed_dim: 768
+  freeze_backbone: true
+
+# Feature Extraction
+feature_extraction:
+  batch_size: 32
+  num_workers: 4
+  resolution_strategy: "resize"  # Options: "resize" or "interpolate"
+  feature_types:
+    - "cls"  # [CLS] token only (768-dim)
+    - "avg_patch"  # Averaged patch tokens (768-dim)
+    - "concat"  # CLS + avg_patch (1536-dim)
+  output_dir: "experiments/features"
+
+# Training
+training:
+  seed: 42
+  batch_size: 128
+  num_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+
+  # Classifier head options: "linear", "mlp_2layer", "mlp_3layer"
+  classifier_head: "linear"
+  mlp_hidden_dims: [256]  # For MLP heads
+  dropout: 0.3
+
+  # Loss function options: "ce_weighted", "ce_sqrt_weighted", "focal", "label_smoothing"
+  loss_function: "ce_weighted"
+  focal_gamma: 2.0
+  label_smoothing: 0.1
+
+# Evaluation
+evaluation:
+  primary_metric: "macro_f1"
+  save_confusion_matrix: true
+  save_per_class_metrics: true
+
+# Logging
+logging:
+  use_wandb: false
+  use_tensorboard: true
+  project_name: "wbcbench2026"
+  log_interval: 10
+
+# Device
+device: "mps"  # Apple Silicon GPU

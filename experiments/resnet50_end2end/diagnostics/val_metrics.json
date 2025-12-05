@@ -1,0 +1,85 @@
+{
+  "accuracy": 0.8665420560747663,
+  "macro_f1": 0.3566790552476414,
+  "weighted_f1": 0.8238642233697661,
+  "per_class": {
+    "BA": {
+      "precision": 1.0,
+      "recall": 0.85,
+      "f1": 0.918918918918919,
+      "support": 60
+    },
+    "BL": {
+      "precision": 0.8360655737704918,
+      "recall": 0.866504854368932,
+      "f1": 0.8510131108462455,
+      "support": 412
+    },
+    "BNE": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 71
+    },
+    "EO": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 169
+    },
+    "LY": {
+      "precision": 0.8763657274295572,
+      "recall": 0.9700827498408657,
+      "f1": 0.9208459214501511,
+      "support": 1571
+    },
+    "MMY": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 47
+    },
+    "MO": {
+      "precision": 0.7967806841046278,
+      "recall": 0.8497854077253219,
+      "f1": 0.822429906542056,
+      "support": 466
+    },
+    "MY": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 75
+    },
+    "PC": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 32
+    },
+    "PLY": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    },
+    "PMY": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 34
+    },
+    "SNE": {
+      "precision": 0.8780114722753346,
+      "recall": 0.9956634865568084,
+      "f1": 0.9331436699857752,
+      "support": 2306
+    },
+    "VLY": {
+      "precision": 0.6,
+      "recall": 0.11320754716981132,
+      "f1": 0.19047619047619047,
+      "support": 106
+    }
+  }
+}

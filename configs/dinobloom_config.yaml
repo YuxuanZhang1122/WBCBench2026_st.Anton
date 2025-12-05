@@ -1,0 +1,58 @@
+# DinoBloom Training Configuration
+# Fixed setup: cls features, centercrop 368->224, linear classifier, ce_sqrt_weighted loss
+
+data:
+  root_dir: "raw_data"
+  image_size: 368
+  target_size: 224
+  num_classes: 13
+
+model:
+  checkpoint_path: "DinoBloom-B.pth"
+  embed_dim: 768
+  freeze_backbone: true
+
+feature_extraction:
+  batch_size: 64
+  num_workers: 4
+  resolution_strategy: "centercrop"
+  feature_type: "cls"
+  output_dir: "experiments/features"
+
+# Augmentation config for feature space
+augmentation:
+  aggressive_threshold: 0.05
+  medium_threshold: 0.10
+
+training:
+  seed: 42
+  batch_size: 256
+  num_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+  num_workers: 4
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+
+  classifier_head: "linear"
+  mlp_hidden_dims: [256]
+  dropout: 0.3
+
+  loss_function: "ce_sqrt_weighted"
+  focal_gamma: 2.0
+  label_smoothing: 0.1
+
+evaluation:
+  primary_metric: "macro_f1"
+  save_confusion_matrix: true
+  save_per_class_metrics: true
+
+logging:
+  use_wandb: false
+  use_tensorboard: true
+  project_name: "wbcbench2026"
+  log_interval: 10
+
+device: "mps"
