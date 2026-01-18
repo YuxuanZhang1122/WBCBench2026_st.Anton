@@ -1,0 +1,6 @@
+fewshot_data_dir:
+    matek: '/home/aih/jan.boada/project/codes/datasets/jan/data/matek/real_train_fewshot/seed0'
+    custom_wbc: '/home/xiaos7/projects/CytoDiff/datasets/custom_wbc/images'
+
+model_dir:
+    sd2.1: 'Manojb/stable-diffusion-2-1-base'

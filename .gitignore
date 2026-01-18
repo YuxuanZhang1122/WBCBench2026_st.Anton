@@ -1,22 +1,75 @@
-# Data and checkpoints
-raw_data/
-*.pth
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
-venv/
 *.egg-info/
+dist/
+build/
 
-# IDE
-.idea/
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
 .vscode/
+.idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
+Thumbs.db
+
+# Model checkpoints and weights
+*.pth
+*.ckpt
+*.pt
+*.h5
+*.pb
+*.onnx
+checkpoints/
+weights/
+*.safetensors
+
+# Datasets (usually too large for git)
+data/
+dataset/
+datasets/
+raw_data/
+*.csv
+*.zip
+*.tar.gz
+
+# Experiment outputs
+experiments/
+outputs/
+runs/
+logs/
+*.log
+
+# TensorBoard
+events.out.tfevents.*
+
+# Augmented/generated images (can be large)
+generated/
+augmented/
+synthetic/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Predictions
+predictions/
+*.npy
+*.npz

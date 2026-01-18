@@ -1,0 +1,6 @@
+
+save_dir: '/home/xiaos7/data_areas/lmr-ihb-imaging/xiaos7/experiments/cytodiff/generated_images'
+datadream_dir: '/home/xiaos7/data_areas/lmr-ihb-imaging/xiaos7/experiments/cytodiff'
+model_dir:
+    sd2.1: '/home/xiaos7/data_areas/lmr-ihb-imaging/xiaos7/experiments/cytodiff/hub_cache/models--Manojb--stable-diffusion-2-1-base/snapshots/0094d483a120f3f33dafbd187ea4aa60d10de75c'
+

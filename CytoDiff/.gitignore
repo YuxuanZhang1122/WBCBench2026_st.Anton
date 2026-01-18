@@ -1,0 +1,34 @@
+# Ignorar carpetas y archivos comunes
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar scripts de ejecución
+run.sh
+run_prova.sh
+
+# Ignorar wandb (experimentos, logs)
+wandb/
+
+# Clasificación
+classification/run.sh
+classification/__pycache__/
+classification/wandb/
+
+# Generation
+generation/run.sh
+generation/__pycache__/
+
+# Training
+training/run.sh
+training/run_prova.sh
+training/__pycache__/
+training/LoRA_info/
+training/model/
+training/output/
+# Datasets
+datasets/data/matek
+
+# Results
+results/images/
+results/synthetic/

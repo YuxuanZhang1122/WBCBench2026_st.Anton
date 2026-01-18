@@ -1,0 +1,20 @@
+wandb_key: 1ad3596e3206bad696a86d07a719adb74373ccd9 #c8402d246f6c85ba56487bb7f4d15b5e3b45e781 #WANDB_KEY
+metadata_dir: /home/aih/jan.boada/project/codes/classification/metadata/matek
+clip_download_dir: CLIP_CHECKPOINT_PATH
+
+dataroot: '/home/aih/jan.boada/project/codes/classification' #csv path
+
+synth_train_data_dir: '/home/aih/jan.boada/project/codes/results/synthetic2/matek/sd2.1/gs2.0_nis50/shot16_seed6_template1_lr0.0001_ep300/train' #GLOBAL_PATH_TO_SYNTH_DATA_DIR
+
+real_train_data_dir:
+    matek: '/home/aih/jan.boada/project/codes/classification/metadata/matek/train' #PATH_TO_REAL_TRAIN_DATA_DIR
+
+real_test_data_dir:
+    matek: '/home/aih/jan.boada/project/codes/classification/metadata/matek/test' #PATH_TO_REAL_TEST_DATA_DIR
+
+real_train_fewshot_data_dir: 
+    matek: '/home/aih/jan.boada/project/codes/datasets/data/matek/real_train_fewshot/seed0' #PATH_TO_FEWSHOT_DATA_DIR
+
+
+
+
